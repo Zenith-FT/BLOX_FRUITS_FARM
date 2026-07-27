@@ -27,7 +27,7 @@ local SELF_URL          = "https://github.com/Zenith-FT/BLOX_FRUITS_FARM/blob/ma
 local MaxPlayers        = Players.MaxPlayers
 local teleportQueue     = queue_on_teleport or (syn and syn.queue_on_teleport)
 
-===
+-- =====
 
 task.wait(5)
 

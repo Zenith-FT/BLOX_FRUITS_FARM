@@ -22,7 +22,7 @@ local FARM_SCAN_WAIT    = 2      -- pause entre 2 scans de la map
 
 -- serverhop
 local HOP_TIMEOUT       = 10     -- secondes sans fruit avant de hop
-local SELF_URL          = ""     -- URL de CE script pour relance auto (optionnel)
+local SELF_URL          = "https://github.com/Zenith-FT/BLOX_FRUITS_FARM/blob/main/BLOX_FRUITS.lua"     -- URL de CE script pour relance auto (optionnel)
 
 local MaxPlayers        = Players.MaxPlayers
 local teleportQueue     = queue_on_teleport or (syn and syn.queue_on_teleport)

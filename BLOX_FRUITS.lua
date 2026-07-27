@@ -17,7 +17,7 @@ local playerGui  = player:WaitForChild("PlayerGui")
 
 -- >>> CONFIG <<<
 local TEAM              = "Pirates"
-local FARM_MAX_SPEED    = 400       -- vitesse max du tween en studs/s
+local FARM_MAX_SPEED    = 500    -- vitesse max du tween en studs/s
 local FARM_SCAN_WAIT    = 2      -- pause entre 2 scans de la map
 
 -- serverhop

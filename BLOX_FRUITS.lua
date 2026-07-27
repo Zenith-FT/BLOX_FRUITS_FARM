@@ -12,17 +12,23 @@ local Players    = game:GetService("Players")
 local RS         = game:GetService("ReplicatedStorage")
 local TweenS      = game:GetService("TweenService")
 
-local player     = Players.LocalPlayer
+-- attend que LocalPlayer existe (relance apres hop = execute tres tot,
+-- avant que Players.LocalPlayer soit dispo -> sinon crash ligne WaitForChild)
+local player = Players.LocalPlayer
+while not player do
+    task.wait(0.1)
+    player = Players.LocalPlayer
+end
 local playerGui  = player:WaitForChild("PlayerGui")
 
 -- >>> CONFIG <<<
 local TEAM              = "Pirates"
-local FARM_MAX_SPEED    = 350    -- vitesse max du tween en studs/s
+local FARM_MAX_SPEED    = 400    -- vitesse max du tween en studs/s
 local FARM_SCAN_WAIT    = 2      -- pause entre 2 scans de la map
 
 -- serverhop
-local HOP_TIMEOUT       = 10     -- secondes sans fruit avant de hop
-local SELF_URL          = "https://raw.githubusercontent.com/Zenith-FT/BLOX_FRUITS_FARM/refs/heads/main/BLOX_FRUITS.lua"     -- URL de CE script pour relance auto (optionnel)
+local HOP_TIMEOUT       = 30     -- secondes sans fruit avant de hop
+local SELF_URL          = ""     -- URL de CE script pour relance auto (optionnel)
 
 local MaxPlayers        = Players.MaxPlayers
 local teleportQueue     = queue_on_teleport or (syn and syn.queue_on_teleport)
